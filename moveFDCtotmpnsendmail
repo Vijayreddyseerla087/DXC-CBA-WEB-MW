@@ -1,0 +1,7 @@
+echo `date` " Moving FDC to temperory" >>
+find /var/mqm/errors - name '*.FDC' | head -6 > list.txt
+while read g
+do cp -pr $g /tmp/temps/
+rm -rf $g
+mail -v vijay.seerla@dxc.com < list.txt
+done < list.txt
