@@ -1,0 +1,2 @@
+find /var/mqm/errors -xdev -size +102400 -ls | sort -r +6 >> abcd.txt
+mail -v vijay.seerla@dxc.com < abcd.txt
