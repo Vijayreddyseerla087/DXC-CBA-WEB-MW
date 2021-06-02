@@ -4,6 +4,7 @@ find /tmp/temps -name '*.FDC' -mtime +7 > qwerty.txt
 find /tmp/temps -name '*.FDC' -mtime +7 -exec rm {} \;
 mail -v vijay.seerla@dxc.com < qwerty.txt
 
+
 echo "Removing 30 days older abcd.txt" >> qwerty.txt
 find /var/mqm -name 'abcd.txt' -mtime +30 -exec rm {} \;
 mail -v vijay.seerla@dxc.com < qwerty.txt
